@@ -1,0 +1,328 @@
+:root {
+  --primary: #9b59b6;
+  --text: #555;
+  --textLight: #999;
+  --headerHeight: 60px;
+  --borderColor: #e1e4e8;
+}
+
+* {
+  /* outline: none; */
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100vh;
+  color: var(--text);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  flex-grow: 0;
+  height: var(--headerHeight);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: var(--textLight);
+}
+
+header .header-wrapper {
+  flex-grow: 1;
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+header.internal .header-wrapper {
+  justify-content: space-between;
+}
+
+header h1 span {
+  color: var(--primary)
+}
+
+header .nav .nav-link {
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  width: 200px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  display: initial;
+  position: relative;
+}
+
+#logo #version-alpha {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: .6em;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .page-title {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.container .nav-tabs-container .page-title {
+  align-items: center;
+  align-self: start;
+}
+
+.container .page-title .project-name {
+  flex-grow: 1;
+}
+
+.projects {
+  margin-top: 30px;
+}
+
+.project-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.nav .nav-item .nav-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav .nav-item .nav-link svg {
+  margin-right: .5rem;
+}
+
+.project-detail .nav {
+  align-self: stretch;
+}
+
+.nav-tabs-container {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  padding: 1em;
+}
+
+.loading-wrapper {
+  display: flex;
+  align-self: stretch;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-data-preview {
+  background-color: var(--light);
+  padding: 0 1em;
+  border-radius: 3px;
+  overflow-x: auto;
+}
+
+.project-data-preview summary {
+  padding: 1em 0;
+}
+
+.diff-table table {
+  width: 100%;
+}
+
+.diff-table table .add {
+  background-color: #27ae6077;
+}
+
+.diff-table table .remove {
+  background-color: #c0392b77;
+}
+
+.diff-table table td.modify {
+  background-color: #f39c1277;
+}
+
+.google-drive-logo {
+  padding-bottom: 5px;
+}
+
+.formr-logo {
+  font-family: Roboto,Arial,sans-serif;
+  font-weight: 700;
+}
+
+.formr-logo span {
+  font-weight: 400;
+  color: #99cc53;
+}
+
+.crash-report {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-self: stretch;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+table tr td .btn-link {
+  padding: 0;
+  vertical-align: initial;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: row;
+}
+
+.radio-group > * {
+  border: 1px solid var(--borderColor);
+  margin-left: -1px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 0;
+}
+
+.radio-group > *.checked {
+  border-color: var(--primary);
+  z-index: 1;
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.radio-group > *:first-child {
+  margin-left: 0;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.radio-group > *:last-child {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.radio-group > * > label {
+  padding: .3rem 1rem;
+  cursor: pointer;
+}
+
+.radio-group > * > input {
+  display: none;
+}
+
+.recovery-modal-body {
+  display: flex;
+  padding: 2em;
+  padding-bottom: 0;
+}
+
+table.data-source-preview > tbody > tr > td:not(:first-child) {
+  border-left: 1px solid var(--borderColor)
+}
+
+.row.project-recovery .form-control {
+  border-width: 1px;
+}
+
+.manual-sync {}
+
+.manual-sync-update {
+  border-radius: 30px;
+  border: 2px dashed var(--borderColor);
+  background-color: #fff;
+}
+
+.update-csv {
+  padding: 2em 0;
+  color: var(--textLight);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.update-csv-icon {
+}
+
+.update-csv-text {
+  margin: 1em 0;
+  color: var(--text);
+  font-weight: bold;
+  font-variant: all-small-caps;
+}
+
+.update-csv-subtext {
+  font-size: .8rem;
+  color: var(--textLight);
+}
+
+.empty-state {
+  padding: 5em;
+  border-radius: 30px;
+  border-style: dashed;
+  border-width: 6px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  align-self: stretch;
+}
+
+.empty-state.no-border {
+  border: hidden;
+}
+
+.empty-state .empty-state-text {
+  font-size: 1.2rem;
+  margin: 1em 0;
+  font-variant: all-small-caps;
+  text-align: center;
+}
+
+.empty-state .empty-state-subtext {
+  font-size: 1rem;
+  color: var(--textLight);
+  font-variant: all-small-caps;
+}
+
+.empty-state > form {
+  align-self: stretch;
+}
+
+.settings-nav .nav-link {
+  width: 200px;
+}

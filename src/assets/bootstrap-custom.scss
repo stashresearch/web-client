@@ -1,0 +1,146 @@
+@use "sass:map";
+$theme-colors: (
+  "primary": #9b59b6,
+  "success": #27ae60,
+  "danger": #e74c3c,
+  "warning": #f39c12,
+  "info": #2980b9,
+  "blue": #3498db,
+  "yellow": #f1c40f,
+);
+
+@import '~bootstrap/scss/bootstrap.scss';
+
+.alert {
+  border-width: 0;
+  border-left-width: 3px;
+  border-radius: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.btn.btn-wide {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.nav-link.btn-wide {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+form > h4 {
+  margin-bottom: 2rem;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.table thead th {
+  border-top-width: 0;
+}
+
+.nav-tabs .nav-link {
+  border-width: 0;
+}
+
+.nav-tabs .nav-link.active {
+  border-bottom: 3px solid var(--primary);
+  font-weight: bold;
+}
+
+.form-inline {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.form-inline .form-group {
+  position: relative;
+}
+
+.form-inline .invalid-feedback {
+  position: absolute;
+  bottom: -1.25rem;
+  left: .75rem;
+}
+
+.modal-open .modal.show {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.modal-dialog {
+  max-width: 80vw;
+}
+
+@media screen and (orientation:portrait) {
+  .modal-dialog {
+    max-width: 95vw;
+  }
+}
+
+.small-caps {
+  font-variant: all-small-caps;
+}
+
+.btn.btn-link {
+  font-variant: all-small-caps;
+}
+
+.btn-link-icon {
+  @extend .btn;
+  @extend .btn-link;
+  @extend .d-inline-flex;
+  @extend .align-items-center;
+  font-variant: all-small-caps;
+}
+
+.btn.btn-inverted {
+  @extend .btn;
+  @extend .btn-primary;
+  background: none;
+  color: var(--primary);
+}
+
+.alert ul:last-child {
+  margin-bottom: 0;
+}
+
+.popover .popover-header {
+  font-variant-caps: all-small-caps;
+}
+
+.empty-state {
+  @extend .alert
+}
+
+.breadcrumb {
+  background-color: unset;
+  font-variant: all-small-caps;
+}
+
+.nav.flex-column .nav-item .nav-link {
+  justify-content: left;
+}
+
+.v-nav-wrapper {
+  padding: 0;
+}
+
+.v-nav-wrapper .nav .nav-item .nav-link {
+  font-variant: small-caps;
+  padding-left: 1em;
+  border-right: 3px solid transparent;
+}
+
+.v-nav-wrapper .nav .nav-item .nav-link.active {
+  border-right: 3px solid var(--primary);
+  font-weight: bold;
+  color: var(--text);
+}

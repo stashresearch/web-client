@@ -1,0 +1,79 @@
+.Dropzone {
+  height: 200px;
+  background-color: #fff;
+  color: var(--textLight);
+  border: 2px dashed var(--borderColor);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 16px;
+  transition: background-color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
+  font-variant: all-small-caps;
+}
+
+.Highlight {
+  color: var(--primary);
+  border-style: solid;
+  border-color: var(--primary);
+}
+
+.Highlight .upload-icon {
+  color: var(--primary);
+}
+
+.FileInput {
+  display: none;
+}
+
+.upload-icon {
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  transition: color 300ms ease-in-out;
+}
+
+.files-progress {
+  width: 100%;
+  padding: 20px 0;
+  text-align: left;
+}
+
+.file-progress {
+  padding: 10px 0;
+}
+
+.file-title {
+  display: flex;
+  flex-direction: row;
+}
+
+.file-name {
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.file-percentage {
+  flex-grow: 0;
+  font-weight: bold;
+  min-width: 50px;
+  text-align: right;
+}
+
+.progress-bg {
+  width: 100%;
+  height: 15px;
+  background-color: var(--borderColor);
+  border-radius: 7px;
+}
+
+.progress-fill {
+  background-color: var(--primary);
+  height: 100%;
+  margin: 0;
+  border-radius: 7px;
+}

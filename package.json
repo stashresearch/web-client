@@ -1,0 +1,81 @@
+{
+  "name": "stashresearch",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@primer/octicons-react": "^10.0.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/openpgp": "^4.4.12",
+    "async-es": "^3.2.0",
+    "bcryptjs": "^2.4.3",
+    "bootstrap": "^4.5.2",
+    "es6-promisify": "^6.1.1",
+    "fast-memoize": "^2.5.2",
+    "formik": "^2.1.5",
+    "history": "^4.10.1",
+    "immutable": "3.8.2",
+    "is-promise": "^2.1.0",
+    "load-script": "^1.0.0",
+    "memoize-one": "^5.1.1",
+    "node-sass": "^4.14.1",
+    "object-hash": "^2.0.3",
+    "openpgp": "^4.10.6",
+    "p-memoize": "^4.0.0",
+    "papaparse": "^5.2.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0-beta.16",
+    "react-dom": "^16.12.0",
+    "react-google-picker": "^0.1.0",
+    "react-gravatar": "^2.6.3",
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.3",
+    "redux": "^4.0.5",
+    "redux-actions": "^2.6.5",
+    "redux-localstorage-simple": "^2.1.6",
+    "redux-logger": "^3.0.6",
+    "redux-promise": "^0.6.0",
+    "redux-promise-middleware": "^6.1.2",
+    "redux-thunk": "^2.3.0"
+  },
+  "browser": {
+    "openpgp": "openpgp/dist/openpgp.min.js"
+  },
+  "scripts": {
+    "start": "PORT=3000 react-scripts start",
+    "build": "REACT_APP_GIT_REV=`git rev-parse --short HEAD` react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "rm -rf live-rollback/ && mv -f live live-rollback/ && cp -r build/ live"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": ">=6.2.2",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": ">=2.18.0",
+    "eslint-plugin-jest": "^23.6.0",
+    "eslint-plugin-node": ">=9.1.0",
+    "eslint-plugin-promise": ">=4.2.1",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-standard": ">=4.0.0"
+  }
+}
