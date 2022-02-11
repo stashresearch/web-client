@@ -19,7 +19,7 @@
     "is-promise": "^2.1.0",
     "load-script": "^1.0.0",
     "memoize-one": "^5.1.1",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "object-hash": "^2.0.3",
     "openpgp": "^4.10.6",
     "p-memoize": "^4.0.0",
